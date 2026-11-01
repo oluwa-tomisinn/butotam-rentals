@@ -134,8 +134,8 @@ img { max-width: 100%; }
   content: ""; position: absolute; left: 0; bottom: 0; height: 3px; width: 0;
   background: var(--accent); border-radius: 99px; transition: width .22s ease;
 }
-.nav-links a:hover { color: var(--primary); }
-.nav-links a:hover::after { width: 100%; }
+.nav-links a:hover { color: #7c3aed; }
+.nav-links a:hover::after { width: 100%; background: #7c3aed; }
 
 .nav-actions { display: flex; gap: 10px; align-items: center; }
 
