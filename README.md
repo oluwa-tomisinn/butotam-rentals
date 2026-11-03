@@ -14,6 +14,8 @@ Affordable **event equipment rental in Ojoo, Ibadan**: canopies, plastic chairs,
 | `script.js` | Mobile menu, click-to-add equipment, scroll reveal, WhatsApp booking |
 | `image/` | `Logo.png`, `canopy.png`, `chairs.png` — real business photos |
 
+The Home links use `/home`; the Netlify rewrite in `_redirects` serves the single-page site at that path.
+
 ### Page sections (in order)
 
 1. **Hero** — H1 targets `Event Equipment Rental in Ojoo, Ibadan`
