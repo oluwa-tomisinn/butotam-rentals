@@ -36,6 +36,8 @@ The navigation uses clean routes (`/home`, `/rentals`, `/bedspread-duvets`, `/fa
 - `LocalBusiness` JSON-LD (address, phone, hours, areaServed)
 - `FAQPage` JSON-LD matching the visible FAQ
 - One H1, descriptive alt text on local images, real NAP everywhere
+- Responsive WebP image variants selected with `srcset` and `sizes`
+- Critical above-the-fold styles are inlined; main and Google Fonts stylesheets load asynchronously
 
 ## Booking form → WhatsApp
 
