@@ -14,7 +14,7 @@ Affordable **event equipment rental in Ojoo, Ibadan**: canopies, plastic chairs,
 | `script.js` | Mobile menu, click-to-add equipment, scroll reveal, WhatsApp booking |
 | `image/` | `Logo.png`, `canopy.png`, `chairs.png` — real business photos |
 
-The Home links use `/home`; the Netlify rewrite in `_redirects` serves the single-page site at that path.
+The navigation uses clean routes (`/home`, `/rentals`, `/bedspread-duvets`, `/faq`, `/booking`, and `/contact`). Netlify rewrites these paths to the single-page site, and the script scrolls to the matching section without adding a hash fragment.
 
 ### Page sections (in order)
 

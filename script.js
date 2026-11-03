@@ -7,8 +7,40 @@ const header = document.getElementById('siteHeader');
 const equipmentField = document.getElementById('equipmentField');
 
 const WHATSAPP_NUMBER = '2348038090208';
+const routeSections = {
+  '/': 'home',
+  '/index.html': 'home',
+  '/home': 'home',
+  '/rentals': 'rentals',
+  '/bedspread-duvets': 'bedspreads-duvets',
+  '/faq': 'faq',
+  '/booking': 'booking',
+  '/contact': 'contact'
+};
 
 year.textContent = new Date().getFullYear();
+
+const getRoutePath = () => window.location.pathname.replace(/\/+$/, '') || '/';
+const scrollToCurrentRoute = (behavior = 'auto') => {
+  const sectionId = routeSections[getRoutePath()];
+  const section = sectionId && document.getElementById(sectionId);
+  if (section) section.scrollIntoView({ behavior });
+};
+
+document.addEventListener('click', (event) => {
+  const link = event.target.closest('a');
+  if (!link || link.hash || link.origin !== window.location.origin) return;
+
+  const path = link.pathname.replace(/\/+$/, '') || '/';
+  if (!routeSections[path]) return;
+
+  event.preventDefault();
+  if (getRoutePath() !== path) window.history.pushState({}, '', path);
+  scrollToCurrentRoute('smooth');
+});
+
+window.addEventListener('popstate', () => scrollToCurrentRoute());
+scrollToCurrentRoute();
 
 const setMenuOpen = (open) => {
   navLinks.classList.toggle('active', open);
