@@ -33,6 +33,7 @@ The navigation uses clean routes (`/home`, `/rentals`, `/bedspread-duvets`, `/fa
 ### SEO included in `index.html`
 
 - Local title + meta description + canonical + geo tags
+- `WebSite` structured data for the preferred search-result site name and optimized PNG favicon
 - `LocalBusiness` JSON-LD (address, phone, hours, areaServed)
 - `FAQPage` JSON-LD matching the visible FAQ
 - One H1, descriptive alt text on local images, real NAP everywhere
